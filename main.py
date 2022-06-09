@@ -5,6 +5,11 @@ from ursina.prefabs.first_person_controller import FirstPersonController
 # create a window
 app = Ursina()
 
+#improving the window
+window.title = 'Plant Parents 1.0'
+window.borderless = False 	# show a border
+window.fullscreen = True 	# go full screen
+window.fps_counter.enabled = False # don't show the FPS counter
 
 # create the 3D world
 ground = Entity(
