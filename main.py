@@ -7,7 +7,6 @@ def update():
 	if held_keys['q']:
 		app.quit()
 	
-
 # create a window
 app = Ursina()
 
@@ -15,6 +14,7 @@ app = Ursina()
 window.title = 'Plant Parents 1.0'
 window.fullscreen = True 	# go full screen
 window.fps_counter.enabled = False # don't show the FPS counter
+window.exit_button.visible = False # Do not show the in-game red X that closes the window
 
 # create the 3D world
 ground = Entity(
