@@ -15,8 +15,6 @@ ground = Entity(
 
 Sky()
 
-player = FirstPersonController()
-
 class Player(Entity):
     def input(self, key):
         if key == 'w':
@@ -27,6 +25,15 @@ class Player(Entity):
 
         if key == 'a':
             self.animate('rotation_y', self.rotation_y - 90, duration=.1)
+
+# Load tree
+
+Tree_Model = Entity(
+	model = "assets/tree2.obj",
+	collider = "mesh",
+	scale = 1)
+
+player = FirstPersonController(z= 4)
 
 # start running the game
 app.run()
